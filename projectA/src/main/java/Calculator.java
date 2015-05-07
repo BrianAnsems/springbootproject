@@ -27,8 +27,12 @@ public class Calculator {
     	return (float)firstNumber/secondNumber;
     }
     
-    public static void main(String[] args) throws Exception{
-		SpringApplication.run(Calculator.class, args);
+    public static void main(String[] args){
+		Calculator c = new Calculator();
+		c.add(3,4);
+		c.subtract(5,2);
+		c.multiply(11,7);
+		c.divide(6,2);
     }
 
 }
