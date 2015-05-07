@@ -8,3 +8,6 @@ Initially had trouble overcomplicating the issue, incorporating HTML web pages t
 Restarted from scratch and completed the "Hello World" example in the Spring Boot reference guide.
 From there, I included a simple Adding program built out of Swing.
 Currently, I have the original SpringApplication.run main method from the example commented out. I'm not sure if the method is required. The adding program seems to work without it. Will confirm.
+
+Removed Swing component. Simplifies to one class with operations and one main method.
+Still trying to find out how to incorporate arguments into the main method.
