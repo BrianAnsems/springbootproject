@@ -4,9 +4,6 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 
-
-@RestController
-@EnableAutoConfiguration
 public class Calculator {
 
 
@@ -23,8 +20,8 @@ public class Calculator {
      	return firstNumber*secondNumber;
      }
     
-    public float divide(int firstNumber, int secondNumber){
-    	return (float)firstNumber/secondNumber;
+    public int divide(int firstNumber, int secondNumber){
+    	return firstNumber/secondNumber;
     }
     
     public static void main(String[] args){
