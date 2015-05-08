@@ -27,7 +27,7 @@ public class calculatortest{
 
 	    int result = calculator.multiply(6, 4);
 
-	    assertEquals(25, result);
+	    assertEquals(24, result);
 	}
 
     @Test
