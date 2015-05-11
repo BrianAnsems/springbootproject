@@ -38,6 +38,15 @@ public class calculatortest{
 
 	    assertEquals(2, result);
 
+
+	    try{
+	    	assertEquals(true, calculator.divide(1,0));
+	    	fail("An Exception should be given.");
+		}catch(ArithmeticException e){
+
+		}
+		
+	
     }
 
 }
