@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 public class SpringBootApplication{
 
 	public static void main(String[] args){
-		Calculator calculator = new Calculator();
+		Calculator.main(null);
     }
 
 }
