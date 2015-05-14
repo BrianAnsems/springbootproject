@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class SumController{
 
-	@RequestMapping("/sum")
-	public int sum(@RequestParam(value="val")int val){
-		return val;
+	@RequestMapping(method = RequestMethod.GET)
+	public int sum(@RequestParam(value="val")int [] valArray){
+		int summed=0;
+		for(int i=0; i<valArray.length; i++){
+			summed += valArray[i];
+		}
+		return summed;
 	}
 
 	public static void main(String [] args) throws Exception {
