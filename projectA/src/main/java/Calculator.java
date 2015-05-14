@@ -1,7 +1,3 @@
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.Scanner;
 
@@ -11,8 +7,7 @@ public class Calculator {
 
     
     public int add(int firstNumber, int secondNumber){        
-    	return firstNumber+secondNumber;
-        System.out.print(firstNumber+secondNumber);
+        return firstNumber+secondNumber;
         }
 
     public int subtract(int firstNumber, int secondNumber){
@@ -31,16 +26,17 @@ public class Calculator {
 
         while(true){
 
+            Calculator calculator = new Calculator();
             Scanner sc = new Scanner(System.in);
-
+            
             int firstNumber = sc.nextInt();
             String operation = sc.next();
             int secondNumber = sc.nextInt();
 
-            if (operation == "+"){add(firstNumber, secondNumber);}
-            if (operation == "-"){subtract(firstNumber, secondNumber);}
-            if (operation == "*"){multiply(firstNumber, secondNumber);}
-            if (operation == "/"){divide(firstNumber, secondNumber);}
+            if (operation == "+"){calculator.add(firstNumber, secondNumber);}
+            if (operation == "-"){calculator.subtract(firstNumber, secondNumber);}
+            if (operation == "*"){calculator.multiply(firstNumber, secondNumber);}
+            if (operation == "/"){calculator.divide(firstNumber, secondNumber);}
 
            } 
 
