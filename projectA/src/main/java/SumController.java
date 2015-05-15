@@ -17,7 +17,7 @@ public class SumController{
 	}
 
 
-        @RequestMapping("/subtract")
+    @RequestMapping("/subtract")
 	public int subtract(@RequestParam(value="val")int [] valArray){
 		return calculator.subtract(valArray[0],valArray[1]);
 	}
@@ -26,7 +26,7 @@ public class SumController{
 	public int multiply(@RequestParam(value="val")int [] valArray){
 		return calculator.multiply(valArray[0],valArray[1]);
 	}
-        @RequestMapping("/divide")
+    @RequestMapping("/divide")
 	public int divide(@RequestParam(value="val")int [] valArray){
 		return calculator.divide(valArray[0],valArray[1]);
 	}
