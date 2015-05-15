@@ -8,13 +8,27 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class SumController{
 
-	@RequestMapping(method = RequestMethod.GET)
+	Calculator calculator = new Calculator();
+
+
+	@RequestMapping("/sum")
 	public int sum(@RequestParam(value="val")int [] valArray){
-		int summed=0;
-		for(int i=0; i<valArray.length; i++){
-			summed += valArray[i];
-		}
-		return summed;
+		return calculator.add(valArray[0],valArray[1]);
+	}
+
+
+        @RequestMapping("/subtract")
+	public int subtract(@RequestParam(value="val")int [] valArray){
+		return calculator.subtract(valArray[0],valArray[1]);
+	}
+
+	@RequestMapping("/multiply")
+	public int multiply(@RequestParam(value="val")int [] valArray){
+		return calculator.multiply(valArray[0],valArray[1]);
+	}
+        @RequestMapping("/divide")
+	public int divide(@RequestParam(value="val")int [] valArray){
+		return calculator.divide(valArray[0],valArray[1]);
 	}
 
 	public static void main(String [] args) throws Exception {
