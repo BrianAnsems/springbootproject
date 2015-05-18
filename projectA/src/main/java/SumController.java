@@ -2,6 +2,9 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+
+import org.springframework.ui.Model;
 
 
 @RestController
@@ -11,10 +14,12 @@ public class SumController{
 	Calculator calculator = new Calculator();
 
 
+
 	@RequestMapping("/sum")
-	public int sum(@RequestParam(value="val")int [] valArray){
-		return calculator.add(valArray[0],valArray[1]);
-	}
+    public String sum(@RequestParam("val") int valOne,@RequestParam("val2") int valTwo, Model model){
+        model.addAttribute("result",calculator.add(valOne,valTwo));
+        return "redirect:/result.html";
+    }
 
 
     @RequestMapping("/subtract")
