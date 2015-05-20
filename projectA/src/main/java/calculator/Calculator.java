@@ -24,25 +24,6 @@ public class Calculator {
     	return firstNumber/secondNumber;
     }
     
-    public static void main(String[] args){
-
-        while(true){
-
-            Calculator calculator = new Calculator();
-            Scanner sc = new Scanner(System.in);
-            
-            int firstNumber = sc.nextInt();
-            String operation = sc.next();
-            int secondNumber = sc.nextInt();
-
-            if (operation == "+"){calculator.add(firstNumber, secondNumber);}
-            if (operation == "-"){calculator.subtract(firstNumber, secondNumber);}
-            if (operation == "*"){calculator.multiply(firstNumber, secondNumber);}
-            if (operation == "/"){calculator.divide(firstNumber, secondNumber);}
-
-           } 
-
-    }
 
 }
     

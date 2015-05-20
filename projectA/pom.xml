@@ -16,21 +16,15 @@
     <!-- Additional lines to be added here... -->
 	<dependencies>
         
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
         
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
 
         <dependency>
               <groupId>junit</groupId>
@@ -38,8 +32,9 @@
               <version>4.12</version>
               <scope>test</scope>
         </dependency>
-        
+
 </dependencies>
+
 <build>
     <plugins>
         <plugin>
