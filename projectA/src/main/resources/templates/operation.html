@@ -4,22 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 	<body>
-		<form action="#" th:action="@{/operation}" th:object="${calculator}" method="post">
+		<form action="/" method="get">
             <table>
                 <tr>
-                    <td>FirstNumber:</td>
-                    <td><input type="text" th:field="*{firstNumber}" /></td>
+                    <td>First Number:</td>
+                    <td><input type="text" name="val" /></td>
 
                 </tr>
                 <tr>
-                    <td>SecondNumber:</td>
-                    <td><input type="text" th:field="*{secondNumber}" /></td>
+                    <td>Second Number:</td>
+                    <td><input type="text" name="val2" /></td>
                 </tr>
                 <tr>
-                    <td><button type="submit">Sum</button></td>
-                    <td><button type="submit">Subtract</button></td>
-                    <td><button type="submit">Multiply</button></td>
-                    <td><button type="submit">Divide</button></td>
+                    <td><button type="submit" formaction="/sum">Sum</button></td>
+                    <td><button type="submit" formaction="/subtract">Subtract</button></td>
+                    <td><button type="submit" formaction="/multiply">Multiply</button></td>
+                    <td><button type="submit" formaction="/divide">Divide</button></td>
                 </tr>
             </table>
         </form>
