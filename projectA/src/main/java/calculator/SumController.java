@@ -2,6 +2,8 @@ package calculator;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -12,6 +14,10 @@ public class SumController{
 
 	Calculator calculator = new Calculator();
 
+	@RequestMapping(value="/operation", method=RequestMethod.GET)
+	public String operationForm(Calculator calculator){
+		return "operation";
+	}
 
 
 	@RequestMapping("/sum")

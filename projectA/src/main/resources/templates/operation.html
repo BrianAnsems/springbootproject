@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+	<body>
+		<form action="#" th:action="@{/operation}" th:object="${calculator}" method="post">
+            <table>
+                <tr>
+                    <td>FirstNumber:</td>
+                    <td><input type="text" th:field="*{firstNumber}" /></td>
+
+                </tr>
+                <tr>
+                    <td>SecondNumber:</td>
+                    <td><input type="text" th:field="*{secondNumber}" /></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>
